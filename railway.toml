@@ -2,6 +2,6 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "dotnet TodoApi.dll"
+startCommand = "dotnet out/TodoApi.dll"
 healthcheckPath = "/api/todo"
 healthcheckTimeout = 100
