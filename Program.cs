@@ -46,6 +46,7 @@ app.MapHealthChecks("/health");
 
 app.MapControllers();
 
+app.MapGet("/", () => "API is running!");
 // Auto-migrate database
 using (var scope = app.Services.CreateScope())
 {
@@ -60,5 +61,11 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine($"Database creation failed: {ex.Message}");
     }
 }
+
+
+
+
+
+
 
 app.Run();
