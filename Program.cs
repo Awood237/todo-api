@@ -3,8 +3,7 @@ using TodoApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
 
 // Add services
 builder.Services.AddControllers();
